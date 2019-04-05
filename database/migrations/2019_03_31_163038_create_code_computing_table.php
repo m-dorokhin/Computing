@@ -13,7 +13,7 @@ class CreateCodeComputingTable extends Migration
      */
     public function up()
     {
-        Schema::create('computing', function (Blueprint $table) {
+        Schema::create('code_computing', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
             $table->integer('code_id');

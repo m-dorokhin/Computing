@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateComputingTable extends Migration
+class CreateComputingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateComputingTable extends Migration
      */
     public function up()
     {
-        Schema::create('computing', function (Blueprint $table) {
+        Schema::create('computings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->bigInteger('user_id');
             $table->text('title');
             $table->text('text');
         });
